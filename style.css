@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+  background-color: #FAF8F4;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px,
+      transparent 20px
+    ),
+    /* vertical lines */
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px,
+      transparent 20px
+    );
+}
+#header{
+    
+    margin: 0;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    margin-bottom: 0;
+}
+#homePageTitle{
+    font-family: "playfair display";
+    font-size: 4rem;
+    color: #333534;
+    text-align: center;
+    margin-bottom: 0;
+    padding-top: 1rem;
+}
+#homePageTagline{
+    text-align: center;
+    color: #333534;
+    font-size: 1.2rem;
+    margin-top: 0;
+    font-family: special elite;
+    margin-bottom: 10px;
+}
+#navbar hr{
+    border: none; /* Remove default border */
+  height: 1.5px; /* Set desired thickness */
+  background-color: rgba(51, 53, 52, 0.8); /* Set desired color */
+  margin: 13px 0; /* Add top and bottom margin for spacing */
+
+}
+.navElems{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    margin-bottom: 0;
+}
+.navElem{
+    color: #333534;
+    font-family: raleway;
+    font-weight: 400;
+    cursor: pointer;
+}
+.heroImageSection {
+  width: 100%;                  /* full width */
+  padding: 0 8rem;              /* 40px padding left & right (adjust as needed) */
+  box-sizing: border-box;       /* ensures padding is included in total width */
+  position: relative;   
+     
+  margin-top: 0;   /* for overlay text */
+  padding-top : 13px;
+}
+
+.heroImageSection img {
+  width: 100%;                  /* fills container width (minus padding) */
+  height: auto;                 /* maintain aspect ratio */
+  display: block;               /* remove bottom gap */
+   opacity: 0.9;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.hero-text {
+  position: absolute;          
+  top: 77%;                    
+  left: 50%;                   
+  transform: translate(-50%, -50%);
+  color: #FAF8F4;                
+  text-align: center;
+  
+  
+  border-radius: 8px;          
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.hero-text p {
+  font-family: 'Merriweather';  
+  font-weight: 400;
+  
+  margin: 5px 0 0;
+}
+.hero-text button {
+  background-color: #a73f36;   /* dark gray, newspaper ink vibe */
+  color: white;                /* classic contrast */
+  border: none;                /* remove default border */
+  margin-top: 8px;
+  padding: 6px 20px;          /* space around text */
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif; /* clean font */
+  font-size: 1rem;
+  cursor: pointer;             /* pointer on hover */
+  transition: all 0.3s ease;   /* smooth hover animation */
+}
+
+.hero-text button:hover {
+  background-color: #444;      /* slightly lighter on hover */
+  transform: translateY(-1px); /* tiny lift effect */
+}
+
+#topStories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem; /* sets the spacing between divs */
+  max-width: 1200px; /* total width limit */
+  margin: 2rem auto; /* centers and adds top/bottom space */
+  padding: 0 8rem; /* this creates your left/right “margin” space */
+}
+.story {
+  background-color: #f9f8f5;
+  
+  
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.story:hover {
+  transform: translateY(-4px);
+}
+
+.story img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.story h3 {
+  font-family: crimson text;
+  font-size: 1.3rem;
+  color: #333534;
+  padding-top: 5px;
+  text-align: left;
+}
+
+.story p{
+  color: #333534;
+  padding-top: 3px;
+  font-size: 1rem;
+  font-family: crimson text;
+}
+
+.lineAfterTopStories{
+  border: none; /* Remove default border */
+  height: 1.5px; /* Set desired thickness */
+  background-color: rgba(51, 53, 52, 0.8); /* Set desired color */
+  margin: 2px 8rem; /* Add top and bottom margin for spacing */
+  
+}
+#restOfContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem; /* padding between the two columns */
+  padding: 1rem 8rem; /* padding on right and left sides of the container */
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: none;
+}
+
+/* Left column: main content (70%) */
+#leftSide {
+  flex: 0 0 70%;
+}
+
+/* Right column: sidebar (30%) */
+#rightSide {
+  flex: 0 0 30%;
+}
+
+/* Optional: make it responsive for mobile */
+@media (max-width: 900px) {
+  #restOfContent {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  #leftSide,
+  #rightSide {
+    flex: 1 1 100%;
+  }
+}
+#editorialFlexContainer{
+  margin-left: 0;
+  display: flex;
+  gap: 1rem;
+  margin-top: 15px;
+}
+.editorial h3{
+  font-family: raleway;
+  font-weight: 600;
+  color: #333534;
+  font-size: 1.2rem;
+}
+.editorial img{
+  width: 200px;
+  height: auto;
+  
+  opacity: 0.8;
+}
+#editorialText h2{
+  font-family: crimson text;
+  color: #333534;
+  margin-top: -5px;
+  font-size: 2rem;
+}
+#editorialText p{
+  color: #333534;
+  font-size: 1.2rem;
+  font-family: crimson text;
+  margin-top: 8px;
+}
+#quote{
+  font-family: playfair display;
+  font-size: 1.9rem;
+  color: #333534;
+}
+.readMoreButton{
+  cursor: pointer;
+  width: max-content;
+  margin-top: 20px;
+}
+.readMoreButton a{
+  color: #a73f36;
+  font-family: raleway;
+  font-weight: bold;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: padding 0.4s ease, color 0.4s ease;
+}
+.readMoreButton svg{
+  transition: padding 0.4s ease, color 0.4s ease;
+}
+.readMoreButton:hover a{
+  padding-right: 5px;
+  color: 	#333534;
+}
+.readMoreButton:hover svg{
+  color: #333534;
+}
+.view-CV-Arrow{
+  display: inline; 
+  color: #a73f36; 
+  vertical-align: middle; 
+  padding-left: 20px; 
+  margin-bottom: 5px;
+}
+.heroText a:hover .view-CV-Arrow{
+  color: #ae8f65;
+}
+.editorial hr{
+  border: none; /* Remove default border */
+  height: 1.5px; /* Set desired thickness */
+  background-color: rgba(51, 53, 52, 0.8); /* Set desired color */
+  margin: 13px 0; /* Add top and bottom margin for spacing */
+}
+#podcast h3{
+  font-family: raleway;
+  font-weight: 600;
+  color: #333534;
+  font-size: 1.2rem;
+}
+#podcast audio {
+			background-color: #f1f3f4;    /* gray background */
+  border-radius: 10px;           /* remove rounded corners */
+  border: solid #e6e8ea 1px;               /* optional: remove default border */
+  display: inline-block;
+  width: 300px;               /* any width you like */
+  height: 40px;     
+  margin-top: 5px;
+}
+#podcast p{
+  color: #333534;
+  font-size: 1rem;
+  font-family: crimson text;
+  margin-top: 3px;
+  margin-left: 2px;
+}
+#footer{
+  background-color: #333534;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer p{
+  color: rgba(255,255,255,0.3);
+  text-align: center;
+  font-family: crimson text;
+  font-size: 1rem;
+}
