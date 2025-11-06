@@ -36,7 +36,7 @@
         href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <meta charset="UTF-8" />
-    <title>title</title>
+    <title>The American Front</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -47,11 +47,12 @@
         <div id="navbar">
             <hr>
 
-            <div class="navElems">
-                <a class="navElem">Home</a>
-                <a class="navElem">Bibliography</a>
-                <a class="navElem">About</a>
-                <a class="navElem">Archives</a>
+            <div class="navElems links">
+                <li class="navLinks"><span class="dot"></span><a href="index.html" class="navElem">Home</a></li>
+                <li class="navLinks"><span class="dot"></span><a href="bibliography.html"
+                        class="navElem">Bibliography</a></li>
+                <li class="navLinks"><span class="dot"></span><a href="about.html" class="navElem">About</a></li>
+                <li class="navLinks"><span class="dot"></span><a href="letters.html" class="navElem">Letters</a></li>
             </div>
             <hr style="margin-bottom: 0;">
 
@@ -63,7 +64,7 @@
         <div class="hero-text">
             <h1>Japanese Strike Without Warning!</h1>
             <p><i>December 7, 1941 - Pearl Harbor Wakes to the Sound of Explosions</i></p>
-            <button>READ MORE</button>
+            <a style="text-decoration: none;" href="pearlHarbor.html"><button>READ MORE</button></a>
         </div>
     </section>
 
@@ -71,24 +72,27 @@
 
 
     <section id="topStories">
-        <div class="story">
-            <img src="images/baseball-74003_1280.jpg" alt="Story 1">
-            <h3>Baseball Marches On Through War</h3>
-            <p>Even as players enlist, the nation’s pastime refuses to fade.</p>
-        </div>
-
-        <div class="story">
-            <img src="images/baseball-74003_1280.jpg" alt="Story 2">
-            <h3>Baseball Marches On Through War</h3>
-            <p>Even as players enlist, the nation’s pastime refuses to fade.</p>
-        </div>
-
-        <div class="story">
-            <img src="images/baseball-74003_1280.jpg" alt="Story 3">
-            <h3>Baseball Marches On Through War</h3>
-            <p>Even as players enlist, the nation’s pastime refuses to fade.</p>
-        </div>
-
+        <a href="baseballArticle.html">
+            <div class="story">
+                <img src="images/baseball-74003_1280.jpg" alt="Story 1">
+                <h3>Baseball Marches On Through War</h3>
+                <p>Even as players enlist, the nation’s pastime refuses to fade.</p>
+            </div>
+        </a>
+        <a href="weather.html">
+            <div class="story">
+                <img src="images/typhoonCobra.jpg" alt="Story 2">
+                <h3>Typhoon Cobra Cripples Ships</h3>
+                <p>How a storm that nobody saw coming did the most damage</p>
+            </div>
+        </a>
+        <a href="d-day.html">
+            <div class="story">
+                <img src="images/3500.png" alt="Story 3">
+                <h3>The Beginning of the End for WWII</h3>
+                <p>The story of how our troops crushed German forces along the coasts of Normandy</p>
+            </div>
+        </a>
     </section>
     <hr class="lineAfterTopStories">
     <section id="restOfContent">
@@ -104,6 +108,7 @@
                         <p>By Allister Morgan</p>
                         <p style="margin-top: 20px;">We can no longer look away in ignorance of the atrocities committed
                             in Auschwitz...</p>
+
                         <div class="readMoreButton" id="cv-download">
                             <a style="display: inline;">READ MORE</a>
                             <svg xmlns="http://www.w3.org/2000/svg" class="view-CV-Arrow" style="" width="1.2rem"
@@ -114,6 +119,12 @@
                                 <path d="m12 5 7 7-7 7" />
                             </svg>
                         </div>
+
+                        <script>
+                            document.getElementById("cv-download").onclick = function () {
+                                window.location.href = "naziArticle.html";
+                            };
+                        </script>
                     </div>
 
                 </div>
@@ -127,21 +138,21 @@
             <div id="podcast">
                 <h3>RADIO BROADCAST</h3>
                 <audio controls>
-                    <source src="https://media.geeksforgeeks.org/wp-content/uploads/20241009180552641558/sample-12s.mp3"
+                    <source src="images/podcast.mp3"
                         type="audio/mpeg">
                 </audio>
                 <p>Listen to our 1 minute news dispatch from London.</p>
             </div>
             <div id="propaganda">
-                <img style="width: 100%; height: auto; margin-top: 40px;" src="images/71p1OMjeqYL._AC_UF894,1000_QL80_.jpg">
-                
+                <img style="width: 100%; height: auto; margin-top: 40px;" src="images/Add a heading.jpg">
+
             </div>
         </div>
     </section>
     <section id="footer">
         <p>© 1942 The American Front Newspaper<br>
-Published in New York, U.S.A.<br>
-All reporting in service of victory and freedom</p>
+            Published in New York, U.S.A.<br>
+            All reporting in service of victory and freedom</p>
     </section>
 
 </body>
