@@ -37,6 +37,7 @@ body {
     margin-bottom: 0;
     padding-top: 1rem;
 }
+
 #homePageTagline{
     text-align: center;
     color: #333534;
@@ -52,6 +53,27 @@ body {
   margin: 13px 0; /* Add top and bottom margin for spacing */
 
 }
+.navbar .links{
+  display: flex;
+  gap: 5vw;
+}
+.navLinks{
+  display: flex;
+}
+.navLinks a{
+  align-items: center;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(51, 53, 52, 0.2);;
+  margin-top: 6px;
+  
+  transition: opacity 0.3s ease;
+  margin-right: 5px;
+  opacity: 0;
+}
 .navElems{
     display: flex;
     justify-content: center;
@@ -59,12 +81,17 @@ body {
     padding-left: 8rem;
     padding-right: 8rem;
     margin-bottom: 0;
+    
 }
 .navElem{
     color: #333534;
     font-family: raleway;
     font-weight: 400;
     cursor: pointer;
+    text-decoration: none;
+}
+.navLinks:hover .dot{
+  opacity: 1;
 }
 .heroImageSection {
   width: 100%;                  /* full width */
@@ -132,9 +159,12 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem; /* sets the spacing between divs */
-  max-width: 1200px; /* total width limit */
+   /* total width limit */
   margin: 2rem auto; /* centers and adds top/bottom space */
   padding: 0 8rem; /* this creates your left/right “margin” space */
+}
+#topStories a{
+  text-decoration: none;
 }
 .story {
   background-color: #f9f8f5;
@@ -155,6 +185,14 @@ body {
   object-fit: cover;
   opacity: 0.8;
 }
+@media (min-width: 1400px) {
+    .story img{
+      height: 300px;
+    }
+}
+
+
+
 
 .story h3 {
   font-family: crimson text;
@@ -321,3 +359,337 @@ body {
   font-family: crimson text;
   font-size: 1rem;
 }
+
+
+
+
+
+/* custom Article styles */
+.headerArticle{
+  margin: 0;
+    padding-left: 17rem;
+    padding-right: 17rem;
+    
+    margin-bottom: 0;
+}
+.articleImage{
+  width: 100%;
+  margin-top: 10px;
+}
+.articlePageTitle{
+  font-family: "playfair display";
+    font-size: 2.5rem;
+    color: #333534;
+    text-align: left;
+    margin-bottom: 0;
+    padding-top: 5rem;
+
+}
+.articleDescription{
+  padding-top: 10px;
+  font-family: crimson text;
+  font-size: 1.3rem;
+  color: #333534;
+}
+.articleUpdated{
+  font-family: crimson text;
+  padding-top: 10px;
+  font-size: 1rem;
+  color: rgba(0,0,0,0.7); 
+}
+.byline{
+  font-family: crimson text;
+  margin-top: 10px;
+  font-size: 1.1rem;
+ 
+  color: rgba(0,0,0,0.5); 
+}
+.articleContent{
+  margin: 0;
+    padding-left: 17rem;
+    padding-right: 17rem;
+   
+    margin-bottom: 10vh;
+}
+.articleContent p{
+  font-family: crimson text;
+  font-size: 1.3rem;
+  color: #333534;
+  margin-top: 20px;
+  
+}
+.dropcap::first-letter {
+  float: left;
+  font-size: 3em;      /* Make it tall enough to cover ~3 lines */
+  line-height: 0.8;      /* Adjust vertical spacing */
+  margin: 0.1em 0.15em -5px 0; /* Top/right/bottom/left margins */
+  font-weight: bold;
+  color: #333534;
+  
+}
+
+
+#articleHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;              /* make it span full screen width */
+  background-color: #2E2B27; /* change to whatever tone fits your site */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1.5rem;        /* adjust side padding for spacing */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08); /* subtle shadow for realism */
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+
+/* The logo on the left */
+#articleHeader .logo {
+  font-family: 'UnifrakturCook', cursive;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+}
+
+
+
+/* The “Est. 1942” text on the right */
+#articleHeader .established {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8); /* makes the SVG visible (since stroke uses currentColor) */
+}
+
+#articleHeader .established svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  stroke: rgba(255, 255, 255, 0.9); /* you can use a direct stroke color instead */
+  transition: stroke 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+#articleHeader .established svg:hover {
+  stroke: #ffffff;
+  transform: scale(1.1);
+}
+
+
+
+
+.home-link {
+  text-decoration: none;
+  color: #333534;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
+
+
+
+
+#subPageTitle{
+  font-family: "playfair display";
+    font-size: 4rem;
+    color: #333534;
+    text-align: center;
+    margin-bottom: 0;
+    padding-top: 4rem;
+}
+
+#subPageTagline{
+  text-align: center;
+    color: #333534;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    font-family: special elite;
+    margin-bottom: 10px;
+}
+
+#citations{
+  margin: 2rem 10rem;
+  margin-bottom: 4rem;
+}
+
+#citations p{
+  font-family: crimson text;
+  color: #333534;
+  font-size: 1.3rem;
+}
+
+#wordArt{
+  margin-top: 10px;
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+.wordArtAbout{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Overlay menu container */
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 43, 39, 0.97);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 999; /* slightly below the header */
+}
+
+/* When menu is active */
+#menuOverlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* The stacked list */
+#menuOverlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#menuOverlay li {
+  margin: 1rem 0;
+}
+
+#menuOverlay a {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 6rem;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#menuOverlay a:hover {
+  color: #ffffff;
+}
+
+/* Ensure the SVG looks clickable */
+#menuButton svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  stroke: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: stroke 0.3s ease, transform 0.2s ease;
+}
+
+#menuButton svg:hover {
+  stroke: #fff;
+  transform: scale(1.1);
+}
+
+#menuButton {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#menuButton svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  stroke: rgba(255, 255, 255, 0.9);
+  transition: transform 0.3s ease;
+}
+
+/* Animate the lines */
+#menuButton svg path {
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* When the menu is active, morph into an X */
+#menuButton.active svg path:nth-child(1) {
+  transform: translateY(5.25px) rotate(45deg);
+}
+
+#menuButton.active svg path:nth-child(2) {
+  opacity: 0;
+}
+
+#menuButton.active svg path:nth-child(3) {
+  transform: translateY(-5.25px) rotate(-45deg);
+}
+
+
+#articleHeader .established { color: rgba(255,255,255,0.9); }
+
+/* Important: set the transform box & origin so SVG elements rotate around center */
+#menuButton svg .bar {
+  transition: transform 0.32s cubic-bezier(.2,.9,.2,1), opacity 0.24s ease;
+  transform-box: fill-box;      /* <-- critical */
+  transform-origin: center;     /* <-- critical */
+}
+
+/* Slightly larger and clickable */
+#menuButton svg {
+  width: 28px;
+  height: 28px;
+  stroke: rgba(255,255,255,0.95);
+  display: block;
+}
+
+/* When active: form the X */
+#menuButton.active svg .bar1 {
+  transform: translateY(5.25px) rotate(45deg);
+}
+#menuButton.active svg .bar2 {
+  opacity: 0;
+  transform: scaleX(0.6); /* small shrink for smoothness */
+}
+#menuButton.active svg .bar3 {
+  transform: translateY(-5.25px) rotate(-45deg);
+}
+
+/* overlay styles (kept minimal here; use your existing styles) */
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  background: rgba(46,43,39,0.97);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  visibility:hidden;
+  transition: opacity .4s ease, visibility .4s ease;
+  z-index:999;
+}
+#menuOverlay.active { opacity:1; visibility:visible; }
+
+/* big centered links */
+#menuOverlay ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; justify-content:space-evenly; align-items:center; height:60%; }
+#menuOverlay a { font-family: 'UnifrakturCook', cursive; font-size:4rem; color:rgba(255,255,255,0.6); text-decoration:none; transition:transform .2s, color .2s;}
+#menuOverlay a:hover { transform:scale(1.04); color:#fff; }
